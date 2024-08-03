@@ -4,5 +4,17 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  markdown: {
+    shikiConfig: {
+      theme: 'material-theme',
+      themes: {
+        light: 'material-theme-lighter',
+        dark: 'material-theme-darker',
+      },
+      langs: [],
+      wrap: true,
+      transformers: [],
+    },
+  },
 });
